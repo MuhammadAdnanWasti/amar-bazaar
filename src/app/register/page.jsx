@@ -12,7 +12,7 @@ export default function RegisterPage() {
   
 const payload={username,password}
 const result= await registerUser(payload)
-   console.log(result)
+  //  console.log(result)
       }
   return (
  <div className="hero  min-h-screen">

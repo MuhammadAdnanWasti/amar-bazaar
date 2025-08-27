@@ -1,14 +1,14 @@
 import Link from 'next/link'
 import React from 'react'
-
+export const dynamic="force-dynamic"
 export const getPosts= async()=>{
-  const res= await fetch("/api/items")
+  const res= await fetch("http://localhost:3000/api/items")
   const data=await res.json()
   return data
 }
 export default async function Products() {
   const demoProducts=await getPosts()
-  console.log(demoProducts)
+  // console.log(demoProducts)
   return (
    <div className="max-w-6xl mx-auto p-6">
       <h2 className="text-2xl font-bold mb-6 text-center">Our Products</h2>

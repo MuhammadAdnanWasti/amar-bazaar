@@ -1,16 +1,16 @@
 import Image from "next/image";
 import Banner from "./components/Banner";
 import Link from "next/link";
-
+export const dynamic = 'force-dynamic';
 export const getPosts= async()=>{
-  const res= await fetch("/api/products")
+  const res= await fetch("http://localhost:3000/api/products")
   const data=await res.json()
   return data
 }
 export default async function Home() {
   
     const demoProducts=await getPosts()
-    console.log(demoProducts)
+    // console.log(demoProducts)
   return (
     <div>
      <Banner></Banner>
