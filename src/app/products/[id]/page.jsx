@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 export const getPosts= async(post_id)=>{
-  const res= await fetch(`http://localhost:3000/api/items/${post_id}`)
+  const res= await fetch(`/api/items/${post_id}`)
   const data=await res.json()
   return data
 }
