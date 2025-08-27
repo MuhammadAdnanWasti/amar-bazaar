@@ -2,7 +2,7 @@ import Link from 'next/link'
 import React from 'react'
 export const dynamic="force-dynamic"
 export const getPosts= async()=>{
-  const res= await fetch("http://localhost:3000/api/items")
+  const res= await fetch("https://amar-bazaar.vercel.app/api/items")
   const data=await res.json()
   return data
 }

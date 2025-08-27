@@ -24,7 +24,7 @@ export default function AddProductsPage() {
  setLoading(true); // start loading
    
 try {
-  const res = await fetch("http://localhost:3000/api/items", {
+  const res = await fetch("https://amar-bazaar.vercel.app/api/items", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),
