@@ -1,3 +1,11 @@
+Amar Bazaar is a super shop website where you can buy your daily necessary items from your home.
+Route: 
+ / -> to see landing page
+ /products -> to see products
+ /products/[id] -> to see products details
+ /dashboard/add-product -> to add product and it is a protected route
+ /api/auth/signin -> to sign in
+ /register -> to register
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
