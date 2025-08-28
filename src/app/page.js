@@ -3,7 +3,9 @@ import Banner from "./components/Banner";
 import Link from "next/link";
 export const dynamic = 'force-dynamic';
 export const getPosts= async()=>{
-  const res= await fetch("https://amar-bazaar.vercel.app/api/products")
+  const res= await fetch("https://amar-bazaar.vercel.app/api/limitedproducts")
+const text = await res.text();
+console.log(text);
   const data=await res.json()
   return data
 }

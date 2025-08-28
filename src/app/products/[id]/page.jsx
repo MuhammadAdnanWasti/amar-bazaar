@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+export const dynamic="force-dynamic"
 export const getPosts= async(post_id)=>{
   const res= await fetch(`https://amar-bazaar.vercel.app/api/items/${post_id}`)
   const data=await res.json()

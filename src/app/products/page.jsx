@@ -3,6 +3,9 @@ import React from 'react'
 export const dynamic="force-dynamic"
 export const getPosts= async()=>{
   const res= await fetch("https://amar-bazaar.vercel.app/api/items")
+  if (!res.ok) {
+  throw new Error(`API error: ${res.status}`);
+}
   const data=await res.json()
   return data
 }
