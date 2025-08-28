@@ -1,10 +1,14 @@
+import dbConnect from '@/lib/dbConnect'
+import { ObjectId } from 'mongodb'
 import Link from 'next/link'
 import React from 'react'
-export const dynamic="force-dynamic"
+// export const dynamic="force-dynamic"
 export const getPosts= async(post_id)=>{
-  const res= await fetch(`https://amar-bazaar.vercel.app/api/items/${post_id}`)
-  const data=await res.json()
-  return data
+  // const res= await fetch(`https://amar-bazaar.vercel.app/api/items/${post_id}`)
+  // const data=await res.json()
+  // return data
+  const data=await dbConnect("productsCollection").findOne({_id: new ObjectId(post_id)})
+    return data
 }
 export default async function ProductDetails({params}) {
 const p= await params;
